@@ -89,6 +89,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 93px 93px;
+    padding-bottom: 60px;
   }
 
   .card {
@@ -158,6 +159,30 @@ body {
     line-height: normal;
   }
 
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #FFBA00;
+    margin: 0 4px;
+    border-radius: 5px;
+    
+  }
+  
+  .pagination a.active {
+    background-color: #FFBA00;
+    color: white;
+    border: 1px solid #FFBA00;
+    
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #FFBA00; color: white;}
+
+  .pagination_mobile {
+    display: none;
+  }
+
   @media screen and (max-width: 768px) {
 
     main {
@@ -168,6 +193,10 @@ body {
       display: grid;
       grid-template-columns: 338px 338px;
       gap: 42px;
+    }
+
+    .pagination_mobile {
+      display: none;
     }
   }
 
@@ -202,6 +231,7 @@ body {
       display: grid;
       grid-template-columns: 310px;
       justify-content: center;
+      padding-bottom: 40px;
     }
 
     .card {
@@ -264,5 +294,19 @@ body {
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+    }
+
+    .pagination_mobile {
+      display: block;
+      padding-bottom: 40px;
+    }
+
+    .pagination_desktop {
+      display: none;
+    }
+
+    .arrow {
+      padding-top: 8px;
+      padding-right: 14px;
     }
   }
